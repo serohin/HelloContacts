@@ -22,11 +22,11 @@ public class ContactServiceImpl implements ContactService {
 
     @Override
     public List<Contact> getContactsListNotMatchRegex(String regex) {
-
-        return getAllContacts().parallelStream()
-                .unordered()
-                .filter(contact ->!(contact.getName().matches(regex)))
-                .collect(Collectors.toList());
+        List<Contact> listAllContacts = getAllContacts();
+        return listAllContacts.parallelStream()
+                    .unordered()
+                    .filter(contact ->!(contact.getName().matches(regex)))
+                    .collect(Collectors.toList());
     }
 
     @Cacheable
