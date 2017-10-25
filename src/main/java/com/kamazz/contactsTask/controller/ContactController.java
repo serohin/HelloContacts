@@ -1,7 +1,7 @@
 package com.kamazz.contactsTask.controller;
 
 import com.kamazz.contactsTask.service.ContactService;
-import com.kamazz.contactsTask.validator.RequestParamValidatorImpl;
+import com.kamazz.contactsTask.validator.RequestParamValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -19,7 +19,7 @@ public class ContactController {
     @Autowired
     private ContactService contactService;
     @Autowired
-    private RequestParamValidatorImpl paramValidator;
+    private RequestParamValidator paramValidator;
 
     @GetMapping(value = "/contacts",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity getListContactsByRegex(@RequestParam("nameFilter") String nameFilter) {
