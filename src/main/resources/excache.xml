@@ -5,7 +5,6 @@
     <cache name="cache1"
            maxEntriesLocalHeap="0"
            eternal="false">
-        <persistence strategy="localTempSwap"/>
     </cache>
 </ehcache>
 
