@@ -1,16 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="ehcache.xsd"
          updateCheck="true" monitoring="autodetect" dynamicConfig="true">
-<cache name="sampleCache1"
-       maxEntriesLocalHeap="3000000"
-       maxEntriesLocalDisk="5000000"
-       eternal="false"
-       diskSpoolBufferSizeMB="50"
-       timeToIdleSeconds="600"
-       timeToLiveSeconds="1800"
-       memoryStoreEvictionPolicy="LFU"
-       transactionalMode="off">
-    <persistence strategy="localTempSwap"/>
-</cache>
+    <cache name="cache1"
+           maxEntriesLocalHeap="0"
+           eternal="false">
+        <persistence strategy="localTempSwap"/>
+    </cache>
 </ehcache>
+
 
