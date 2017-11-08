@@ -36,7 +36,7 @@ public class ContactServiceImpl implements ContactService {
                 .collect(Collectors.toList());
     }
 
-    //@Transactional(readOnly = true)
+    @Transactional(readOnly = true)
     @Cacheable
     public List<Contact> getAllContacts() {
         return contactRepository.findAll();
